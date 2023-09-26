@@ -1,0 +1,9 @@
+class Solution:
+    def moveZeroes(self, nums):
+        pt_slow = 0
+        for pt_fast in range(len(nums)):
+            if nums[pt_fast]!= 0 and nums[pt_slow]==0:
+                nums[pt_fast], nums[pt_slow]= nums[pt_slow], nums[pt_fast]
+             
+            if nums[pt_slow] != 0:
+                pt_slow += 1
